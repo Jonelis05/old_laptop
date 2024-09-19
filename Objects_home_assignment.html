@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_objects home assignment</title>
+</head>
+<body>
+    
+<script>
+/*
+var product = {
+    name: 'basketball',
+    price: 2095
+};
+
+console.log(product.price + 500);
+
+product.price += 500;
+console.log(product.price);
+
+product['delivery-time'] = '3 days';
+console.log(product);
+ */
+
+ function comparePrice (product1, product2) {
+    if(product1.price > product2.price){
+        return product2;
+    }else {
+        return product1;
+    }
+ }
+
+ const product1 = {
+    name: 'batai',
+    price: 1999
+ };
+
+ const product2 = {
+    name: 'kelnes',
+    price: 2199
+ };
+
+
+console.log (comparePrice(product1, product2))
+</script>
+
+
+
+</body>
+</html>

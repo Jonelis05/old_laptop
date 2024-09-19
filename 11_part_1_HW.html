@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_part_1_arrays_and_loops_home_work</title>
+</head>
+<body>
+    
+<script>
+
+// 11a. 
+
+/*
+        myArray = [10,20,30];
+        console.log(myArray);
+        myArray[2]= 99;
+        console.log(myArray);
+
+        const nums = [10, 20, 30];
+        nums[2] = 99;
+        console.log(nums);
+
+*/
+
+// 11b.
+/*
+    const myArray = [1, 20, 22, 24, 5];
+
+    function getLastValue(array){
+        const lastValue = array.length -1;
+        return array[lastValue];
+    }
+    console.log(getLastValue(myArray));
+    console.log(getLastValue(['hi', 'hello', 'greetings']));
+*/
+
+// 11c.
+
+/*
+const myArray = [1, 20, 22, 24, 5];
+    console.log(myArray);
+
+    function arraySwap(array){
+        const lastIndex = array.length -1;
+        const lastValue = array[lastIndex];
+        const firstValue = array[0];
+
+        array[0] = lastValue;
+        array[lastIndex] = firstValue;
+
+        return array;
+    }
+    console.log(arraySwap(myArray));
+    console.log(arraySwap(['hi', 'hello', 'greetings']));
+
+*/ 
+
+// 11d.
+
+/*
+for(let i = 1; i < 11; i += 2){
+    console.log(i);
+}
+*/
+
+// 11e.
+
+/*
+for(let i = 5; i >= 0; i-- ){
+    console.log(i);
+}
+*/
+
+// 11f.
+
+/*
+let i = 1;
+while(i < 11){
+    console.log(i);
+    i += 2;
+}
+*/
+
+/*
+let i = 5;
+while(i>=0){
+    console.log(i);
+    i--;
+}
+
+*/
+
+// 11g.
+/*
+    const numberArray = [10, 20, 30, 40, 50];
+    const newNumberArray = [];
+    
+    for(let i = 0; i < numberArray.length; i++){
+        let changedNumber = numberArray[i];
+        let newNumber = changedNumber + 1;
+        newNumberArray.push(newNumber);
+        console.log(newNumberArray);
+    }
+*/
+ //   žemiau nurodytas tas pats sprendimas
+/*
+    const array = [1, 2, 3];
+    const result = [];
+
+    for (let i = 0; i < array.length; i++) {
+    result.push(array[i] + 1);
+    }
+
+    console.log(result);
+*/
+
+// 11h.
+/*
+    function addOne(array) {
+        const result = [];
+
+        for (let i = 0; i < array.length; i++) {
+            result.push(array[i] + 1);
+        }
+
+        return result;
+        }
+
+        console.log(addOne([1, 2, 3]));
+        console.log(addOne([-2, -1, 0, 99]));
+*/
+
+// 11i.
+/*
+            function addNum(array, num) {
+            const result = [];
+
+            for(let i = 0; i < array.lenght; i++) {
+                result.push(array[i] + num);
+            }
+
+            return result;
+
+            }
+
+            console.log(addNum([1, 2, 3], 3));
+            console.log(addNum([1, 2, 3], 2));
+            console.log(addNum([1, 2, 3], 10));
+
+        function addNum(array, num) {
+            const result = [];
+
+            for (let i = 0; i < array.length; i++) {
+                result.push(array[i] + num);
+            }
+
+            return result;
+            }
+
+        console.log(addNum([1, 2, 3], 2));
+        console.log(addNum([1, 2, 3], 3));
+        console.log(addNum([-2, -1, 0, 99], 2));
+
+*/
+
+// 11.j
+
+/*
+        function addArrays(array1, array2) {
+            let result = [];
+
+            for (let i = 0; i < array1.length; i++) {
+                result.push(array1[i] + array2[i]);
+            }
+
+            return result;
+        }
+
+        console.log(addArrays([1,2,3], [1,2,3]));
+        console.log(addArrays([10,20,30], [10,20,30]));
+*/
+
+// 11k.
+/*
+        function countPositive(nums) {
+            let result = 0;
+
+            for(i = 0; i < nums.length; i++){
+                if(nums[i] > 0){
+                    result++;
+                }
+            }
+            return result;
+        }
+        console.log(countPositive([-5, 2, 0.5, -3, 3]));
+*/ 
+
+// 11l
+/*      
+        function minMax(nums) {
+        // We'll set the starting values of min and max
+        // as the first value in the array. (This is
+        // just one way to set the starting values. You
+        // can use another way if you like.)
+        const result = {
+          min: nums[0],
+          max: nums[0]
+        };
+
+        for (let i = 0; i < nums.length; i++) {
+          const value = nums[i];
+
+          // If the value is less than the min,
+          // update the min.
+          if (value < result.min) {
+            result.min = value;
+          }
+
+          // If the value is greater than the max,
+          // update the max.
+          if (value > result.max) {
+            result.max = value;
+          }
+        }
+
+        return result;
+      }
+
+      console.log(minMax([1, -3, 5]));
+      console.log(minMax([-2, 3, -5, 7, 10]));
+
+*/
+// 11m.
+
+/*
+function minMax(nums) {
+        // We'll set the starting values of min and max
+        // to null this time.
+        const result = {
+          min: null,
+          max: null
+        };
+
+        for (let i = 0; i < nums.length; i++) {
+          const value = nums[i];
+
+          // If the min is null OR the value is
+          // less than the min, update the min.
+          if (result.min === null || value < result.min) {
+            result.min = value;
+          }
+
+          // If the max is null OR the value is
+          // greater than the max, update the max.
+          if (result.max === null || value > result.max) {
+            result.max = value;
+          }
+
+          // We have to use 2 if-statements above instead of
+          // an if-else statement. This makes sure both the
+          // min and max are set if they are null.
+        }
+
+        return result;
+      }
+
+      console.log(minMax([1, -3, 5]));
+      console.log(minMax([-2, 3, -5, 7, 10]));
+
+      console.log(minMax([]));
+      console.log(minMax([3]));
+
+      */
+
+
+// 11o
+
+// Mano variantas 
+/*
+    const array = ['hello', 'world', 'search', 'good','search'];
+    let result = 0; 
+    let index = -1;
+
+    for(i = 0; i <= array.length; i++){
+        const value = array[i];
+            if(value === 'search'){
+                index = i;
+            result ++;
+            console.log(index);
+        }
+
+    }
+        
+    console.log(result);
+*/
+
+// Atsakymas
+
+/*
+
+    let words = ['hello', 'world', 'search', 'good'];
+
+    // Set the index to -1 at the start (so we'll assume
+    // the string 'search' doesn't exist in the array).
+    // If we find the string 'search' in the array, we
+    // will update the index.
+    let index = -1;
+
+    for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'search') {
+    index = i;
+    }
+    }
+
+    console.log(index);
+
+    words = ['not', 'found'];
+    index = -1;
+
+    for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'search') {
+    index = i;
+    }
+    }
+
+    console.log(index);
+
+*/
+
+// 11p.
+
+/*
+
+let words = ['hello', 'world', 'search', 'good','search'];
+let index = -1;
+
+for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'search') {
+    index = i;
+    break;
+    }
+    }
+
+    console.log(index);
+*/
+
+//11q.
+
+/*
+
+    function findIndex(array, word){
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === word) {
+                return i;  
+            }
+        }
+    return -1;
+    }
+    console.log(findIndex(['green','red','blue'],'red'));
+    console.log(findIndex(['green','red','blue'],'yellow'));
+
+*/
+
+// 11r.
+
+/*
+
+    function removeEgg(foods){
+        const result = [];
+        
+        for (let i = 0; i < foods.length; i++) {
+            if (foods[i] === 'egg' ){
+                continue;
+            }
+            result.push(foods[i]);
+    }
+    return result;
+}
+    console.log(removeEgg(['egg','apple','ham', 'egg', 'egg']));
+
+*/
+/*
+
+function removeEgg(foods) {
+        const result = [];
+
+        for (let i = 0; i < foods.length; i++) {
+          // If the string is 'egg', use continue to skip it.
+          if (foods[i] === 'egg') {
+            continue;
+          }
+
+          // We don't need to have an else here because
+          // the only way to reach this code is if the 
+          // if-statement above is false.
+          result.push(foods[i]);
+        }
+
+        return result;
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+*/
+
+
+// 11s.
+
+function removeEgg(foods) {
+        const result = [];
+        let eggsRemoved = 0;
+
+        for (let i = 0; i < foods.length; i++) {
+          // Only skip 'egg' if we removed less than 2
+          // of them so far.
+          if (foods[i] === 'egg' && eggsRemoved < 2) {
+            // Update the number of 'egg' we have removed.
+            // This must be done before continue, otherwise,
+            // doing continue first will just skip this code.
+            eggsRemoved++;
+            continue;
+          }
+
+          result.push(foods[i]);
+        }
+
+        return result;
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+</script>
+
+</body>
+</html>

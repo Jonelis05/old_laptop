@@ -1,0 +1,59 @@
+body{
+    background-color: white;
+}
+
+.button-1 {
+    color: black;
+    background-color: yellow;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.request{
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.schedule{
+    color: black;
+    background-color: rgb(230,230,230);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+   }
+
+.js-button{
+    color: white;
+    background-color: purple;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.toggle-button {
+    background-color: rgb(230, 230, 230);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .is-toggled {
+    background-color: black;
+    color: white;
+  }

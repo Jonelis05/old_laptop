@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - document object module</title>
+</head>
+<body>
+
+     <button>hello</button>
+    <button class="js-button">goodbye</button>
+
+<script>
+
+    console.log(document.querySelector('button').innerHTML);
+    document.querySelector('button')
+        .innerHTML = 'labas';
+
+    console.log(document.querySelector('.js-button'));
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+    document.querySelector('.js-button')
+        .innerHTML = 'Sveikumas';  
+
+
+/*
+    console.log(document.title);
+    document.title = 'change';
+
+    console.log(document.body); 
+    console.log(typeof document.body);
+
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = '<button>Labas</button>';
+    */ 
+
+/*
+    document.body.innerHTML='hello';
+    document.title = 'Laba diena'
+*/    
+</script>           
+  
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geimas prieš kompą 2.0</title>
+</head>
+
+<body>
+    <p>Vaskiči</p>
+    <button onclick="
+        playGame('Žirklės');
+    ">Žirklės</button>
+
+    <button onclick="
+      playGame('Šulinys');
+    ">Šulinys</button>
+
+    <button onclick="
+       playGame('Lapas');
+    ">Lapas</button>
+    <script>
+
+        function playGame(playerMove) {
+
+            const computerMove = pickComputermove ();
+
+            console.log(`kompiuteris pasirinko: ${computerMove}`);
+
+            let result = '';
+            
+        if(playerMove === 'Lapas'){
+
+            if (computerMove === 'Žirklės') {
+                   result = 'Pralaimėjai'; 
+            }else if (computerMove === 'Šulinys') {
+                   result = 'Laimėjai';
+            }else  if (computerMove === 'Lapas') {
+                   result = 'Lygiosios!';
+            }
+        }else if(playerMove === 'Šulinys') {
+            if (computerMove === 'Žirklės') {
+                result = 'Laimėjai'; 
+            }else if (computerMove === 'Šulinys') {
+                result = 'Lygiosios!';
+            }else  if (computerMove === 'Lapas') {
+                result = 'Pralaimėjai!';
+        }
+        }else if(playerMove === "Žirklės") {
+            if (computerMove === 'Žirklės') {
+                result = 'Lygu'; 
+            }else if (computerMove === 'Šulinys') {
+                result = 'Pralaimėjai';
+            }else  if (computerMove === 'Lapas') {
+                result = 'Laimėjai!';
+        }
+        }
+            alert(`Tu pasirinkai ${playerMove}, kompiuteris pasirinko ${computerMove}. ${result}`);
+    
+            
+        }
+
+
+        function pickComputermove () {
+            
+            const randomNumber = Math.random();
+            
+            let computerMove = '';
+
+        if(randomNumber >= 0 && randomNumber < 1 / 3) {
+            computerMove = 'Žirklės';
+            
+        } else if (randomNumber >= 0 && randomNumber > 1 / 3 && randomNumber < 2 / 3) {
+            computerMove = 'Šulinys';
+
+        }else if(randomNumber >= 0 && randomNumber > 2 / 3) {
+            computerMove = 'Lapas';
+        }
+
+        return computerMove;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

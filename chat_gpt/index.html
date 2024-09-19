@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MyStore</div>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#admin">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <h2>Products</h2>
+            <div class="product-list"></div>
+        </section>
+
+        <section id="login">
+            <h2>User Login</h2>
+            <form id="user-login-form" class="form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="admin">
+            <h2>Admin Login</h2>
+            <form id="admin-login-form" class="form">
+                <label for="admin-username">Username:</label>
+                <input type="text" id="admin-username" name="admin-username">
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" name="admin-password">
+                <button type="submit">Login</button>
+            </form>
+            <div id="admin-panel" style="display:none;">
+                <h3>Admin Panel</h3>
+                <button id="add-product" class="btn">Add Product</button>
+                <div id="stock-control"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Online Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

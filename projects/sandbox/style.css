@@ -1,0 +1,41 @@
+body{
+    background-color: green;
+    opacity: 50;
+    margin: 0vh;
+    padding-top: 1vh ;
+}
+
+header {
+    height: 5vh;
+    background-color: black;
+    padding: 0vh;
+    padding-top: 2vh;
+    border-color: azure;
+}
+
+nav {
+    display:flex;
+    float: left;
+    margin-right: 5vh;
+    background-color: aqua;
+    color: white;
+    font-style: none;
+    font-size: 10vh;
+    width: 100%;
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: aqua;
+    
+}
+
+ul a{
+    display: inline-block;
+    padding: 8px;
+    text-decoration: none;
+    text-align:right;
+}
